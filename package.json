@@ -1,6 +1,6 @@
 {
   "name": "git-idle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "List, clone and install dependencies from a github repository direct by terminal",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --compilers js:babel-core/register --require babel-polyfill",
     "test:tdd": "npm run test -- --watch",
     "test:coverage": "nyc npm test",
-    "coveralls" : "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
   "preferGlobal": true,
   "files": [
