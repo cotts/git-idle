@@ -1,6 +1,6 @@
 {
   "name": "git-idle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "List, clone and install dependencies from a github repository direct by terminal",
   "main": "index.js",
   "scripts": {
