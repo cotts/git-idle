@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "prefer-arrow-callback": "off",
+    "func-names": "off",
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2,
+    "no-unused-vars": "off"
+  },
+  "plugins": [
+    "mocha",
+    "chai-friendly"
+  ],
+  "env": {
+    "mocha": true
+  }
+}

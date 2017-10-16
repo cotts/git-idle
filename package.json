@@ -1,0 +1,84 @@
+{
+  "name": "git-idle",
+  "version": "1.0.0",
+  "description": "List, clone and install dependencies from a github repository direct by terminal",
+  "main": "index.js",
+  "scripts": {
+    "clear": "rimraf bin",
+    "prebuild": "./node_modules/.bin/babel --out-dir bin src",
+    "build": "npm run clear && npm run prebuild",
+    "build:watch": "npm run build -- --watch",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --compilers js:babel-core/register --require babel-polyfill",
+    "test:tdd": "npm run test -- --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "preferGlobal": true,
+  "files": [
+    "bin"
+  ],
+  "bin": {
+    "git-idle": "bin/main.js"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "keywords": [
+    "js",
+    "cli",
+    "node",
+    "github",
+    "clone"
+  ],
+  "author": "Thadeu Cotts <thadeu.cotts@gmail.com> (https://thadeucotts.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-chai-friendly": "^0.4.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "husky": "^0.11.9",
+    "mocha": "^3.2.0",
+    "nock": "^9.0.22",
+    "nyc": "^10.2.0",
+    "rimraf": "^2.6.1",
+    "sinon": "^2.3.6",
+    "sinon-chai": "^2.11.0",
+    "sinon-stub-promise": "^4.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0",
+    "execa": "^0.8.0",
+    "inquirer": "^3.3.0",
+    "listr": "^0.12.0",
+    "ora": "^1.3.0",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cotts/git-idle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cotts/git-idle/issues"
+  },
+  "homepage": "https://github.com/cotts/git-idle#readme"
+}
