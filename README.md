@@ -1,5 +1,8 @@
 # Git IDLE
 
+[![Build Status](https://travis-ci.org/cotts/git-idle.svg?branch=master)](https://travis-ci.org/cotts/git-idle)
+[![Coverage Status](https://coveralls.io/repos/github/cotts/git-idle/badge.svg?branch=master)](https://coveralls.io/github/cotts/git-idle?branch=master)
+
 > A CLI to list, download and install dependencies direct from a github repository!
 
 ![Example CLI running](img/example.gif)
