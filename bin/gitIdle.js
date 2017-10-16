@@ -36,8 +36,8 @@ const gitIdle = async (user, filter = null, forked = null, skip) => {
   }, {
     title: 'Installing packages with NPM',
     skip: () => {
-      if (skipInstall(isChanged)) return 'No package.json found inside repository';
       if (skip) return 'Install dependencies skipped by user';
+      if (skipInstall(isChanged)) return 'No package.json found inside repository';
       return '';
     },
     task: () => installPackages(isChanged)
